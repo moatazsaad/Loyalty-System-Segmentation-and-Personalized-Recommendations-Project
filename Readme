@@ -1,3 +1,7 @@
+You can run the app directly on Streamlit Cloud by clicking the link below:
+
+[Loyalty System Segmentation and Personalized Recommendations App](https://loyalty-system-segmentation-and-personalized-recommendations-p.streamlit.app)
+
 1- Overview:
   The goal of this data science project is to study customer behavior and preferences to create an effective reminder system in a loyalty rewards program sponsored by 
   retailers and businesses. The system aims to understand each customer's preferences and send targeted reminders, encouraging them to redeem their points at specific 
