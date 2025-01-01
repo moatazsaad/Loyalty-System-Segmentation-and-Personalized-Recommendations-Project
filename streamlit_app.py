@@ -1,10 +1,8 @@
-
 import streamlit as st
 import pandas as pd
 
-# Read the clustered data and pivot table
+# Read the clustered data
 df = pd.read_csv("Clustered_data.csv")
-pivot_total = pd.read_csv("Clustered_pivot.csv")
 
 def get_recommendations(user_id, num_recommendations):
     # Check if the user exists in the data
@@ -38,14 +36,11 @@ def main():
         # Check if the user exists
         if recommendations is not None:
             st.success(f"Top {num_recommendations} Recommendations for User ID {user_id}")
-            st.write(recommendations.reset_index().rename(columns={"Mer_Id": "Merchant ID", "Trx_Vlu": "Total Transaction Value"}))
+            # Create a table with Merchant IDs
+            recommendations_table = pd.DataFrame(recommendations.index.tolist(), columns=["Merchant ID"])
+            st.table(recommendations_table)
         else:
             st.error("User not found. Please enter a valid User ID.")
-
-    # Display pivot table for context (optional)
-    with st.expander("Show Pivot Table Summary"):
-        st.subheader("Clustered Pivot Table Summary")
-        st.write(pivot_total)
 
 # Run the main function
 if __name__ == "__main__":
