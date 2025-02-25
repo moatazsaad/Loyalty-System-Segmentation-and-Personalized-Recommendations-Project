@@ -1,6 +1,6 @@
 # Loyalty System Segmentation and Recommendations
 
-**Visit the app:** [loyalty-system-segmentation-and-personalized-recommendations-p.streamlit.app](loyalty-system-segmentation-and-personalized-recommendations-p.streamlit.app)
+**Visit the app:** [Loyalty System Segmentation and Personalized Recommendations](loyalty-system-segmentation-and-personalized-recommendations-p.streamlit.app)
 
 This project uses DBSCAN clustering to segment users based on transaction behavior and offers personalized merchant recommendations.
 
